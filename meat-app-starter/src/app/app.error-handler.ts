@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable'
-import {Response} from '@angular/http'
+import {HttpErrorResponse} from '@angular/common/http'
 
 export class ErrorHandle {
     static handleError(error: Response | any){
