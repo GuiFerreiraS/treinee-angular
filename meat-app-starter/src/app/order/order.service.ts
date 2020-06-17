@@ -1,11 +1,11 @@
 import { MEAT_API } from './../app.api';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { CartItem } from './../restaurant-detail/shopping-cart/cart-item.model';
 import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shopping-cart.service';
 import { Injectable } from "@angular/core";
 import { OrderItem, Order } from './order.model';
-import 'rxjs/add/operator/map'
+import { map } from 'rxjs/operators'
 
 
 
@@ -41,7 +41,7 @@ export class OrderService {
 
     checkOrder(order: Order): Observable<string> {
         return this.http.post<Order>(`${MEAT_API}/orders`, order)
-                        .map(order => order.id)
+                        .pipe(map(order => order.id))
     }
 
    

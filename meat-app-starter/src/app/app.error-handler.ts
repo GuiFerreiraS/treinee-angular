@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs'
 import {HttpErrorResponse} from '@angular/common/http'
 
 export class ErrorHandle {

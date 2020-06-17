@@ -3,7 +3,8 @@ import {ShoppingCartService} from './shopping-cart.service'
 
 @Component({
   selector: 'mt-shopping-cart',
-  templateUrl: './shopping-cart.component.html'
+  templateUrl: './shopping-cart.component.html',
+  preserveWhitespaces: true
 })
 export class ShoppingCartComponent implements OnInit {
 
